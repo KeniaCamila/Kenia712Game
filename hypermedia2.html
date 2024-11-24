@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven and a Half</title>
+    <link rel="stylesheet" href="gamestyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Seven and a Half</h1>
+        </header>
+
+        <div id="player-info">
+            <label for="player-name">Name:</label>
+            <input type="text" id="player-name" placeholder="Your name">
+            <label for="player-money">Starting Money (€):</label>
+            <input type="number" id="player-money" placeholder="Initial amount">
+            <button id="start-game">Start Game</button>
+        </div>
+
+        <div id="game-area" class="hidden">
+
+            <div id="player-status">
+                <h2 id="player-name-display">Player Name</h2>
+                <p id="player-money-display">Total money: 0 €</p>
+            </div>
+
+            <div id="controls">
+                <label for="bet-input">Bet (€):</label>
+                <input type="number" id="bet-input" placeholder="Bet amount" />
+                <button id="new-round">New Round</button>
+                <button id="end-game">End Game</button>
+            </div>
+
+            <div id="cards-container">
+                <div class="cards-section">
+                    <h3>Your cards:</h3>
+                    <div id="player-cards" class="cards"></div>
+                    <button id="draw-card" class="hidden">Draw Card</button>
+                    <button id="stand" class="hidden">Stand</button>
+                </div>
+                <div class="cards-section">
+                    <h3>Dealer's cards:</h3>
+                    <div id="dealer-cards" class="cards"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="gamescript.js"></script>
+</body>
+</html>
